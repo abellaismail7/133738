@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "1338 Plugin",
+  "description": "1337 check-in notifier",
+  "version": "1.0",
+  "homepage_url": "https://blog.clashbyte.com/",
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches":["https://candidature.1337.ma/*"],
+      "js":["content.js"]
+    }
+  ],
+  "permissions": [
+   "notifications",
+   "https://candidature.1337.ma"
+   ]
+}
