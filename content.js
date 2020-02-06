@@ -1,10 +1,10 @@
 (function(){
     var element = document.querySelector(".span12 > p");
-    if(element 
-        && !element.innerText.includes("De nouveaux creneaux ouvriront prochainement") 
+    
+    if(!element || (!element.innerText.includes("De nouveaux creneaux ouvriront prochainement") 
         && element.style.display === "" 
         && element.style.visibiliy === ""
-        && element.style.opacity === ""
+        && element.style.opacity === "")
         ){
         chrome.runtime.sendMessage({askfor:"notification"});
     }
