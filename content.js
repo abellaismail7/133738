@@ -15,7 +15,7 @@
             console.log(response.counter,response.isActive);
             setTimeout(function(){ 
                 location.reload();
-            }, 60000);
+            },10 * 60 * 1000);
         });
         
         
