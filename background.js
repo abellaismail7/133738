@@ -34,13 +34,6 @@ function showNotification() {
                 type: 'basic', 
                 iconUrl: 'icon.png', 
                 title: "something changed in 1337 website", 
-                message: "CheckIn" + Date.now()
+                message: "CheckIn"
         });
-    var sound = new Audio("noti.mp3")
-    sound.play()
-    chrome.notifications.onClosed.addListener(function( notificationId,byUser) {
-        chrome.notifications.clear(id)
-        sound.pause()
-    })
-
 }
